@@ -651,6 +651,43 @@ body {
   padding-bottom: 12px;
 }
 
+.cart-header {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 24px;
+  border-bottom: 2px solid var(--surface-soft);
+  padding-bottom: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.cart-header h3 {
+  margin-bottom: 0 !important;
+  border-bottom: none !important;
+  padding-bottom: 0 !important;
+  z-index: 1;
+  position: relative;
+}
+
+.bird-icon {
+  font-size: 2.2rem;
+  position: absolute;
+  bottom: 6px;
+  animation: flyBird 5s linear infinite;
+  z-index: 0;
+  display: inline-block;
+}
+
+@keyframes flyBird {
+  0% { left: -50px; opacity: 0; transform: scaleX(-1) translateY(0); }
+  10% { opacity: 1; transform: scaleX(-1) translateY(-6px); }
+  30% { transform: scaleX(-1) translateY(4px); }
+  50% { transform: scaleX(-1) translateY(-6px); }
+  70% { transform: scaleX(-1) translateY(4px); }
+  90% { opacity: 1; transform: scaleX(-1) translateY(-6px); }
+  100% { left: 100%; opacity: 0; transform: scaleX(-1) translateY(0); }
+}
+
 .cart-items {
   min-height: 150px;
   max-height: 300px;
